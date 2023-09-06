@@ -18,6 +18,7 @@ fn arccosTeylor(x:f64, eps:f64) -> (f64, i32) {
 
 // acos(x) = pi/2 - (x + x^3/3 + ..)
 fn main(){
+
 	let mut inp= String::new();
 	println!("Введите x для функции acos(x):");
 	io::stdin().read_line(&mut inp).expect("Не удалось считать строку");
