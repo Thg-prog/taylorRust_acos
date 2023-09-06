@@ -7,13 +7,18 @@
     <cargoProject FILE="$PROJECT_DIR$/Cargo.toml" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3a704d27-673d-4c31-9acf-4e233ffd7f2c" name="Changes" comment="" />
+    <list default="true" id="3a704d27-673d-4c31-9acf-4e233ffd7f2c" name="Changes" comment="LAst version of acos taylor" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="help" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MacroExpansionManager">
@@ -32,7 +37,6 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "master",
     "last_opened_file_path": "C:/Users/truxi/Downloads/intellij-rust-0.4.200.5421-231.zip",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -89,11 +93,32 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1694016071398</updated>
-      <workItem from="1694016073186" duration="4435000" />
+      <workItem from="1694016073186" duration="4763000" />
     </task>
+    <task id="LOCAL-00001" summary="LAst version of acos taylor">
+      <option name="closed" value="true" />
+      <created>1694028722049</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1694028722049</updated>
+    </task>
+    <task id="LOCAL-00002" summary="LAst version of acos taylor">
+      <option name="closed" value="true" />
+      <created>1694028866323</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1694028866323</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="LAst version of acos taylor" />
+    <option name="LAST_COMMIT_MESSAGE" value="LAst version of acos taylor" />
   </component>
 </project>
