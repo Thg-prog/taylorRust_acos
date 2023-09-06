@@ -11,7 +11,7 @@ fn arccosTeylor(x:f64, eps:f64) -> (f64, i32) {
 	while term.abs()>eps{
 		result+=term;
 		n+=2;
-		term *= - squaredX *(n-2)as f64 / (n as f64 * (n-1) as f64);
+		term *= squaredX *(n-2)as f64 / (n as f64 * (n-1) as f64);
 	}
 	(std::f64::consts::PI/2.0 - result ,(n-1)/2)
 }

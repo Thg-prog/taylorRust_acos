@@ -7,11 +7,7 @@
     <cargoProject FILE="$PROJECT_DIR$/Cargo.toml" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3a704d27-673d-4c31-9acf-4e233ffd7f2c" name="Changes" comment="LAst version of acos taylor">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/.rustc_info.json" beforeDir="false" afterPath="$PROJECT_DIR$/target/.rustc_info.json" afterDir="false" />
-    </list>
+    <list default="true" id="3a704d27-673d-4c31-9acf-4e233ffd7f2c" name="Changes" comment="edit arccos to form pi/2-arcsin(x)" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -90,14 +86,40 @@
       <option name="project" value="LOCAL" />
       <updated>1694028866323</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="edit arccos to form pi/2-arcsin(x)">
+      <created>1694038433376</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1694038433376</updated>
+    </task>
+    <task id="LOCAL-00004" summary="edit arccos to form pi/2-arcsin(x)">
+      <created>1694038458246</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1694038458246</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="LAst version of acos taylor" />
-    <option name="LAST_COMMIT_MESSAGE" value="LAst version of acos taylor" />
+    <MESSAGE value="edit arccos to form pi/2-arcsin(x)" />
+    <option name="LAST_COMMIT_MESSAGE" value="edit arccos to form pi/2-arcsin(x)" />
   </component>
 </project>
