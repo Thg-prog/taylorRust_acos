@@ -20,16 +20,14 @@ fn arccosTeylorComplex(x: Complex<f64>, epsilon: f64) -> (Complex<f64>, usize) {
 	let mut result = Complex::new(0.0, 0.0);
 	let mut term = x;
 	let mut squaredX = x * x;
-	let mut denominator = Complex::new(1.0, 0.0);
 	let mut n = 1;
 	while term.norm() > epsilon {
-		term = term * (-squaredX) / (Complex::new((2 * n - 1) as f64, 0.0) * Complex::new((2 * n) as f64, 0.0));
-		result = result + term / denominator;
-		n += 1;
-		denominator = denominator + Complex::new(2.0, 0.0);
+		result = result + term;
+		term = term * (squaredX)*((n-2) as f64) / (Complex::new((n) as f64, 0.0) * Complex::new((n-1) as f64, 0.0));
+		n += 2;
 	}
 
-	(Complex::new(std::f64::consts::PI / 2.0, 0.0) - result, n - 1)
+	(Complex::new(std::f64::consts::PI / 2.0, 0.0) - result, (n - 1)/2)
 }
 
 fn main(){
