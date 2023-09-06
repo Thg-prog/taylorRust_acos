@@ -2,20 +2,18 @@ use std::io;
 extern  crate num_complex;
 use num_complex::Complex;
 
-//acos(x)
+//acos(x)= pi/2 - arcsin(x)
 fn arccosTeylor(x:f64, eps:f64) -> (f64, i32) {
-	let mut result = 0.0;
+	let mut result =0.0 ;
 	let mut term = x;
 	let mut squaredX = x*x;
-	let mut denominator = 1.0;
 	let mut n = 1;
 	while term.abs()>eps{
-		result+=term/denominator;
-		term *=- squaredX / ((2*n-1)as f64 * (2*n) as f64);
-		n+=1;
-		denominator+=2.0;
+		result+=term;
+		n+=2;
+		term *= - squaredX *(n-2)as f64 / (n as f64 * (n-1) as f64);
 	}
-	(std::f64::consts::PI/2.0 - result ,n-1)
+	(std::f64::consts::PI/2.0 - result ,(n-1)/2)
 }
 
 fn arccosTeylorComplex(x: Complex<f64>, epsilon: f64) -> (Complex<f64>, usize) {
