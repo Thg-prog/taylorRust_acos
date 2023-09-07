@@ -7,10 +7,7 @@
     <cargoProject FILE="$PROJECT_DIR$/Cargo.toml" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3a704d27-673d-4c31-9acf-4e233ffd7f2c" name="Changes" comment="HOTFIX asin(x) complex teylor">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.rs" afterDir="false" />
-    </list>
+    <list default="true" id="3a704d27-673d-4c31-9acf-4e233ffd7f2c" name="Changes" comment="HOTFIX asin(x) complex teylor" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -117,7 +114,14 @@
       <option name="project" value="LOCAL" />
       <updated>1694038905038</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Some remake">
+      <created>1694116313204</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1694116313204</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -140,6 +144,7 @@
     <MESSAGE value="edit arccos to form pi/2-arcsin(x)" />
     <MESSAGE value="HOTFIX asin(x) teylor" />
     <MESSAGE value="HOTFIX asin(x) complex teylor" />
-    <option name="LAST_COMMIT_MESSAGE" value="HOTFIX asin(x) complex teylor" />
+    <MESSAGE value="Some remake" />
+    <option name="LAST_COMMIT_MESSAGE" value="Some remake" />
   </component>
 </project>

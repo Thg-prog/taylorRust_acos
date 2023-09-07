@@ -62,5 +62,12 @@ fn main(){
 	}else {
 		let (result, iterations) = arccosTeylor(x, eps);
 		println!("arccos({}) = {} with {} iterations", x, result, iterations);
+		let (result1, iterations1) = expTeylor(xForExp,eps);
+		println!("e^{} = {} with {} iterations", xForExp, result1, iterations1);
+		let xForcos = xForExp%(2 as f64* std::f64::consts::PI);
+		let (result2, iterations2) = cosTeylor(xForcos, eps);
+		println!("cos({}) = {} with {} iterations", xForExp, result2, iterations2);
+		let finallyRes= result*result1*result2;
+		println!("cos({})e^{} = {}", xForExp,xForExp, finallyRes);
 	}
 }
