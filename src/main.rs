@@ -2,6 +2,18 @@ use std::io;
 extern  crate num_complex;
 use num_complex::Complex;
 
+static POW_VEC: &'static [f64] = &[
+0.0,
+10.0,
+100.0,
+1000.0,
+10000.0,
+100000.0,
+1000000.0,
+10000000.0,
+100000000.0,
+];
+
 //acos(x)= pi/2 - arcsin(x)
 fn arccosTeylor(x:f64, eps:f64) -> (f64, i32) {
 	let mut result:f64 =0.0 ;
@@ -17,15 +29,21 @@ fn arccosTeylor(x:f64, eps:f64) -> (f64, i32) {
 }
 
 fn expTeylor(x:f64, eps:f64)->(f64,i32) {
-	let mut result:f64 = 1.0;
-	let mut term: f64 = 1.0;
-	let mut n:i32 = 1;
-	while term.abs() >eps{
-		term*=x/n as f64;
-		result+=term;
-		n+=1;
-	}
-	(result, n-1)
+	let mut result: f64 = 1.0;
+    let mut term: f64 = 1.0;
+    let mut n: i32 = 1;
+
+    while term.abs() > eps {
+        term *= x / n as f64;
+		term = round(term, 2);
+        result += term;
+        n += 1;
+
+		result = round(result, 6);
+    }
+
+    (result, n - 1)
+
 }
 
 fn cosTeylor(x:f64, eps:f64)->(f64, i32){
@@ -34,10 +52,18 @@ fn cosTeylor(x:f64, eps:f64)->(f64, i32){
 	let mut n:i32 = 1;
 	while term.abs()>eps{
 		term *= -x*x/ ((2*n)*(2*n-1)) as f64;
+		term = round(term, 2);
 		result+=term;
 		n+=1;
+		result = round(result, 6);
 	}
 	(result, n-1)
+}
+
+fn round(num: f64, precision: u8) -> f64 {
+	let multiplier = POW_VEC[precision as usize];
+	let tmp_value = (num * multiplier).round().abs() as u64;
+	((tmp_value as f64) / multiplier) * num.signum()
 }
 
 fn main(){
@@ -52,13 +78,13 @@ fn main(){
 	let xForExp:f64 = inp2.trim().parse().expect("НЕ удалось выполнить преобразование во float64");
 	let eps = 1e-6;
 	if x.abs() > 1.0 {
-		let (result, iterations) = expTeylor(xForExp,eps);
+		let (result, iterations) = expTeylor(round(xForExp, 1),eps);
 		let xForcos = xForExp%(2 as f64* std::f64::consts::PI);
 		let (result2, iterations2) = cosTeylor(xForcos, eps);
 		println!("e^{} = {} with {} iterations", xForExp, result, iterations);
-		println!("cos({}) = {} with {} iterations", xForExp, result2, iterations2);
+		println!("cos({}) = {} with {} iterations {}", xForExp, result2, iterations2,round(xForcos, 1));
 		let finallyRes= result*result2;
-		println!("cos({})e^{} = {}", xForExp,xForExp, finallyRes);
+		println!("acos({})cos({})e^{} = {}", xForExp,xForExp,xForExp, finallyRes);
 	}else {
 		let (result, iterations) = arccosTeylor(x, eps);
 		println!("arccos({}) = {} with {} iterations", x, result, iterations);
