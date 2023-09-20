@@ -28,23 +28,30 @@ fn arccosTeylor(x:f64, eps:f64) -> (f64, i32) {
 	(std::f64::consts::PI/2.0 - result ,(n-1)/2)
 }
 
-fn expTeylor(x:f64, eps:f64)->(f64,i32) {
-	let mut result: f64 = 1.0;
-    let mut term: f64 = 1.0;
-    let mut n: i32 = 1;
+fn expTeylor(x: f64, eps:f64) -> (f64, i32) {
+    const E: f64 = std::f64::consts::E;
 
-    while term.abs() > eps {
-        term *= x / n as f64;
-		term = round(term, 2);
-        result += term;
-        n += 1;
-
-		result = round(result, 6);
+    let x2dop:f64 = x.floor();
+    let mut c = 0;
+	let mut res2dop:f64 = 1.0;
+    for _ in 0..x2dop as i32 {
+        res2dop *= E;
+        c += 1;
     }
+    let x2 = x - x2dop;
+    let mut f:f64 = 1.0;
+    let mut res2 = 1.0;
+    let mut n = 0;
 
-    (result, n - 1)
-
+    while f.abs() > eps {
+        f *= x2 / (n + 1) as f64;
+        n += 1;
+        res2 += f;
+    }
+    res2 *=res2dop;
+    (res2, n-1)
 }
+
 
 fn cosTeylor(x:f64, eps:f64)->(f64, i32){
 	let mut result:f64 = 1.0;
@@ -78,13 +85,13 @@ fn main(){
 	let xForExp:f64 = inp2.trim().parse().expect("НЕ удалось выполнить преобразование во float64");
 	let eps = 1e-6;
 	if x.abs() > 1.0 {
-		let (result, iterations) = expTeylor(round(xForExp, 1),eps);
+		let (result, iterations) = expTeylor(xForExp,eps);
 		let xForcos = xForExp%(2 as f64* std::f64::consts::PI);
 		let (result2, iterations2) = cosTeylor(xForcos, eps);
 		println!("e^{} = {} with {} iterations", xForExp, result, iterations);
 		println!("cos({}) = {} with {} iterations {}", xForExp, result2, iterations2,round(xForcos, 1));
 		let finallyRes= result*result2;
-		println!("acos({})cos({})e^{} = {}", xForExp,xForExp,xForExp, finallyRes);
+		println!("cos({})e^{} = {}", xForExp,xForExp, finallyRes);
 	}else {
 		let (result, iterations) = arccosTeylor(x, eps);
 		println!("arccos({}) = {} with {} iterations", x, result, iterations);
@@ -94,6 +101,6 @@ fn main(){
 		let (result2, iterations2) = cosTeylor(xForcos, eps);
 		println!("cos({}) = {} with {} iterations", xForExp, result2, iterations2);
 		let finallyRes= result*result1*result2;
-		println!("cos({})e^{} = {}", xForExp,xForExp, finallyRes);
+		println!("acos({})cos({})e^{} = {}", xForcos,xForExp,xForExp, finallyRes);
 	}
 }

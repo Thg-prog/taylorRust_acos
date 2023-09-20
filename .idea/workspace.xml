@@ -7,7 +7,7 @@
     <cargoProject FILE="$PROJECT_DIR$/Cargo.toml" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3a704d27-673d-4c31-9acf-4e233ffd7f2c" name="Changes" comment="HOTFIX asin(x) complex teylor">
+    <list default="true" id="3a704d27-673d-4c31-9acf-4e233ffd7f2c" name="Changes" comment="add some new">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.rs" afterDir="false" />
     </list>
@@ -131,7 +131,14 @@
       <option name="project" value="LOCAL" />
       <updated>1694118186862</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="add some new">
+      <created>1695153651274</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1695153651274</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -156,6 +163,7 @@
     <MESSAGE value="HOTFIX asin(x) complex teylor" />
     <MESSAGE value="Some remake" />
     <MESSAGE value="Some remake and fix for full answer with noraml arccos" />
-    <option name="LAST_COMMIT_MESSAGE" value="Some remake and fix for full answer with noraml arccos" />
+    <MESSAGE value="add some new" />
+    <option name="LAST_COMMIT_MESSAGE" value="add some new" />
   </component>
 </project>
